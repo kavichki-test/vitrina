@@ -6,3 +6,5 @@
 - java 11
 - android sdk
 - appium
+
+try docker
