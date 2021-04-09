@@ -41,7 +41,7 @@ ENV PATH ${PATH}:${GRADLE_HOME}/bin:${KOTLIN_HOME}/bin:${ANDROID_SDK_ROOT}/cmdli
 RUN export PATH=${ANDROID_SDK_ROOT}/tools:$PATH
 RUN export PATH=${ANDROID_SDK_ROOT}/platform-tools:$PATH
 
-# setup adb server
+# setup adb server and appium hub
 EXPOSE 5037
 EXPOSE 4723
 
