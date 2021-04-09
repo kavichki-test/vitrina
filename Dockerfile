@@ -5,6 +5,7 @@ LABEL maintainer="denischernikovaz@gmail.com"
 # Install Java
 ENV DEBIAN_FRONTEND=noninteractive
 
+#avoid bug
 RUN mkdir -p /usr/share/man/man1 /usr/share/man/man2
 
 ARG JDK_VERSION=11
