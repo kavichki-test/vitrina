@@ -12,7 +12,6 @@ ARG JDK_VERSION=11
 RUN dpkg --add-architecture i386 && \
     apt-get update && \
     apt-get dist-upgrade -y && \
-    apt-get --quiet update --yes && \
     apt-get install -yq --no-install-recommends libncurses5:i386 libc6:i386 libpulse0:i386 pulseaudio libstdc++6:i386 lib32gcc1 lib32ncurses6 lib32z1 zlib1g:i386 && \
     apt-get install -yq --no-install-recommends \ 
      libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \ 
@@ -23,8 +22,6 @@ RUN dpkg --add-architecture i386 && \
 RUN apt-get install -y --no-install-recommends openjdk-${JDK_VERSION}-jdk && \
     apt-get install -yq --no-install-recommends git wget curl unzip && \
     apt-get install -yq --no-install-recommends qt5-default
-
-RUN java --version
 
 # Install Android SDK
 ARG ANDROID_SDK_VERSION=6858069
