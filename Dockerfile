@@ -42,7 +42,7 @@ RUN export PATH=${ANDROID_SDK_ROOT}/platform-tools:$PATH
 EXPOSE 5037
 EXPOSE 4723
 
-# Install emulator
+# Install emulator and Android tools
 RUN echo "y" | sdkmanager "platform-tools" "build-tools;29.0.3" "platforms;android-30" "emulator" && \
     sdkmanager --install "system-images;android-30;google_apis;x86_64" && \
     avdmanager create avd -n VitrinaEmulator --device "pixel" -k "system-images;android-30;google_apis;x86_64"
